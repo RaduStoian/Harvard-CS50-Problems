@@ -44,10 +44,8 @@ int main(int argc, string argv[])
                 if ((input[i] >= 65 && input[i] <= 90) && input[i] + inputKey > 90)
                     
                 {
-                    //wrap back around.
-                    int distance = 90 - input[i];
-                    int remainingKey = inputKey - distance;
-                    input[i] = 64 + remainingKey;                                                     
+                   //wrap back around.
+                    input[i] = ((((input[i] + inputKey) - 65) % 26) + 65);                                                     
                 }
       
                 //if letter is going out of bounds, 
@@ -55,9 +53,7 @@ int main(int argc, string argv[])
                     
                 {
                     //wrap back around.
-                    int distance = 122 - input[i];
-                    int remainingKey = inputKey - distance;
-                    input[i] = 97 + remainingKey;            
+                    input[i] = ((((input[i] + inputKey) - 97) % 26) + 97);            
                 }
                 
                 else
