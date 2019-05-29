@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+
+
+            <h4>File 1</h4>
+            <input type="file" name="file1"></input>
+
+
+            <h4>File 2</h4>
+            <input type="file" name="file2"></input>
+
+            <h4>Algorithm</h4>
+            <select name="algorithm" >
+                <option value="lines">lines</option>
+                <option value="sentences">sentences</option>
+                <option value="substrings">substrings</option>
+            </select>
+
+             <h4>Size n</h4>
+             <input type="number" name="length"></input>
+
+             <button type="submit">Compare</button>
+
+
+        </form>
+    </div>
+
+{% endblock %}

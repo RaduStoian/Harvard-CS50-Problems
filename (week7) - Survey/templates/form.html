@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form id="form" action="/form" method="post">
+
+        <h3>Name</h3>
+        <input id="nameInput" class="input_type" type="text" name="name" placeholder="Firstname Lastname">
+
+        <h3>Gender</h3>
+        <input class="radios" type="radio" name="check" value="M" >M
+        <input class="radios" type="radio" name="check" value="F" >F
+
+        <h3>Favorite Company</h3>
+        <select name = "company" id="selectInput" class="input_type">
+            <option value="None">None</option>
+            <option value="Tesla">Tesla</option>
+            <option value="SpaceX">SpaceX</option>
+            <option value="Boring">Boring</option>
+            <option value="SolarCity">SolarCity</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br><br>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button id="submitBtn" class="btn btn-primary" type="submit" onclick="prevent()">Submit</button>
+
+    </form>
+
+
+    <script>
+    const nameInputx = document.getElementById("nameInput");
+    const submitInput = document.getElementById("submitBtn");
+
+
+   // submitInput.onclick(prevent());
+
+
+
+    // prevents form from submitting if there is no name entered
+    function prevent() {
+
+            $('#form').submit(function (evt){
+
+                if (nameInputx.value == "") {
+
+                    evt.preventDefault();
+                    alert("Please provide a name");
+                }
+            });
+        }
+
+
+
+    </script>
+
+{% endblock %}

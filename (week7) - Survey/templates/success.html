@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h4>CSV file contents</h4>
+
+<table class="table-style">
+    {% for data in lineList %}
+    <tr class="table-style"><td>{{ data }}</td></tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
