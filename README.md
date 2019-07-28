@@ -1,7 +1,5 @@
 # Harvard-CS50-Problems
 
-## Description
-
 CS50 is Harvard's university Introduction to Computer Science Course. It is the actual course students take while on campus. 
 One of the hardest and defintiely the best introductory course available.
 the university staff record each lectures, create problem sets and made the course available for everyone for free.
